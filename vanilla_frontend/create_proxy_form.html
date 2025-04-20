@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create New Proxy</title>
+  <link rel="stylesheet" href="create_proxy_form.css" />
+</head>
+<body>
+  <div class="createProxyContainer">
+
+    <!-- Page title and subtitle -->
+    <h1 class="createProxyTitle">Create New Proxy</h1>
+    <p class="createProxySubtitle">
+      Empower your API by spinning up a new reverse proxy using your cloud provider of choice.
+    </p>
+
+    <!-- Form container with two columns -->
+    <div class="createProxyFormContainer">
+
+      <!-- LEFT COLUMN -->
+      <div class="createProxyFormColumn createProxyLeftColumn">
+
+        <div class="createProxyFormGroup">
+          <label for="name">Name</label>
+          <input type="text" id="name" />
+        </div>
+
+        <div class="createProxyFormGroup">
+          <label for="cloudRegion">Cloud Provider Region</label>
+          <select id="cloudRegion">
+            <option>us-east-1</option>
+            <option>us-west-2</option>
+            <option>eu-central-1</option>
+          </select>
+        </div>
+
+        <div class="createProxyFormGroup">
+          <label for="baseApiUrl">Base API URL</label>
+          <input type="text" id="baseApiUrl" />
+        </div>
+
+        <div class="createProxyFormGroup">
+          <label for="uploadDocs">Upload Documentation</label>
+          <input type="file" id="uploadDocs" />
+        </div>
+
+        <!-- Button row at the bottom of the left column -->
+        <div class="createProxyButtonRow">
+          <button type="submit" class="createProxyButton">Create</button>
+          <button type="button" class="cancelProxyButton">Cancel</button>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="createProxyFormColumn createProxyRightColumn">
+
+        <div class="createProxyFormGroup">
+          <label for="cloudProvider">Cloud Provider</label>
+          <select id="cloudProvider">
+            <option>Amazon Web Services</option>
+            <option>Google Cloud</option>
+            <option>Microsoft Azure</option>
+          </select>
+        </div>
+
+        <div class="createProxyFormGroup">
+          <label for="pricingPlan">Pricing Plan</label>
+          <select id="pricingPlan">
+            <option>Free Tier</option>
+            <option>Pay-as-you-go</option>
+            <option>Enterprise</option>
+          </select>
+        </div>
+
+        <div class="createProxyFormGroup">
+          <label for="apiType">API Request Type</label>
+          <select id="apiType">
+            <option>REST</option>
+            <option>gRPC</option>
+            <option>GraphQL</option>
+          </select>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>

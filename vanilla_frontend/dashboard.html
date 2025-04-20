@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>APIVeil - Developer Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav">
+      <h1 class="dashboard-title">Developer Dashboard</h1>
+      <div class="nav-right">
+        <button class="btn-create" onclick="goCreateProxy()">
+          Create Proxy
+        </button>
+        <div class="user-dropdown">
+          <img
+            class="user-avatar"
+            src="icons/user-avatar.svg"
+            alt="User Avatar"
+          />
+          <!-- Placeholder for a dropdown menu if you want -->
+        </div>
+      </div>
+    </nav>
+
+    <main class="container">
+      <p>Manage all running reverse proxies and servers.</p>
+
+      <table class="dashboard-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Status</th>
+            <th>Cloud Provider</th>
+            <th>Cloud Region</th>
+            <th>Pricing</th>
+            <th>Proxy URL</th>
+            <th>Base API URL</th>
+            <th>API Protocol</th>
+          </tr>
+        </thead>
+        <tbody id="dashboard-table-body">
+          <!-- Dynamically loaded rows from JS or server -->
+          <tr>
+            <td>E-Commerce Store API</td>
+            <td class="status-running">Running</td>
+            <td>Amazon Web Services</td>
+            <td>us-east-1</td>
+            <td>Free Tier</td>
+            <td>https://micro.apiveil.com</td>
+            <td>https://shop.company.com</td>
+            <td>HTTP</td>
+          </tr>
+          <tr>
+            <td>Microservices API Gateway</td>
+            <td class="status-running">Running</td>
+            <td>Microsoft Azure</td>
+            <td>East US</td>
+            <td>Enterprise</td>
+            <td>http://micro.apiveil.com</td>
+            <td>https://micro.company.com</td>
+            <td>gRPC</td>
+          </tr>
+          <!-- Add more rows or dynamically generate them -->
+        </tbody>
+      </table>
+
+      <!-- Pagination Controls -->
+      <div class="pagination-controls">
+        <p>Page 1 / 3</p>
+      </div>
+    </main>
+
+    <script>
+      // Example: on clicking "Create Proxy", go to create_proxy.html
+      function goCreateProxy() {
+        window.location.href = 'create_proxy_form.html';
+      }
+
+      // Example: if user clicks on row -> go to detail page
+      const tableBody = document.getElementById('dashboard-table-body');
+      tableBody.addEventListener('click', (e) => {
+        // If user clicks on a row or a child of the row, handle navigation
+        let row = e.target.closest('tr');
+        if (!row) return;
+        // In real usage, you'd have the proxy ID or name in a data attribute
+        window.location.href = 'index.html';
+      });
+    </script>
+  </body>
+</html>

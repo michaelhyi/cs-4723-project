@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #000;
+    font-family: sans-serif;
+    color: #fff;
+  }
+  
+  .createProxyContainer {
+    margin: 60px 80px;
+  }
+  
+  .createProxyTitle {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .createProxySubtitle {
+    font-size: 1rem;
+    color: #aaa;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+  }
+  
+  .createProxyFormContainer {
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+  }
+  
+  .createProxyFormColumn {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .createProxyFormGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
+  
+  .createProxyFormGroup label {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .createProxyFormGroup input[type="text"],
+  .createProxyFormGroup input[type="file"],
+  .createProxyFormGroup select {
+    width: 250px;
+    padding: 0.75rem;
+    background-color: #333;
+    border: 1px solid #444;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 0.9rem;
+  }
+  
+  .createProxyButtonRow {
+    display: flex;
+    gap: 1rem;
+    margin-top: 10rem;
+  }
+  
+  .createProxyButton {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .cancelProxyButton {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>APIVeil - Login</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Include any fonts needed (this one mainly) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="auth-container">
+      <h1>APIVeil</h1>
+      <h2>Login To Your Account</h2>
+      <h2> </h2>
+      <form class="auth-form" id="login-form">
+        <label for="email">Email</label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="Email"
+          required
+        />
+
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+
+        <div class="forgot-password">
+          <a href="#" class="forgot-password-link">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="btn-primary">Login</button>
+
+        <div class="or-separator">
+          <span>OR</span>
+        </div>
+
+        <button type="button" class="btn-social google-login">
+          <img src="google-logo.png" alt="Google" />
+          Login with Google
+        </button>
+        <button type="button" class="btn-social github-login">
+          <img src="github-logo.png" alt="GitHub" />
+          Login with GitHub
+        </button>
+
+        <div class="register-link">
+          Don't have an account?
+          <a href="register.html">Register</a>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      // Placeholder: handle login form submission
+      const loginForm = document.getElementById('login-form');
+      loginForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // TODO: send POST /api/v1/auth/login with email + password
+        // On success, redirect to dashboard.html
+        window.location.href = 'dashboard.html';
+      });
+    </script>
+  </body>
+</html>
